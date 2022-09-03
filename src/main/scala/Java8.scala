@@ -16,7 +16,7 @@ def mean(in:List[Int]):Int =
     res += item
   res/in.length
 
-@main def hello =
+@main def Java8 =
     // 使用java的类一般还得new, var|val同义
     var l1 = new ArrayList[Any]()
     l1.add("hello")

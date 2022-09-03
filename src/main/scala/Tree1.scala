@@ -11,7 +11,7 @@ def buildTree[A](list: List[A]): BinTree[A] = list match {
   }
 }
 
-@main def main={
+@main def Tree1={
 
   // 构建二叉树
   val list1 = (1 to 9).toList //range to list
