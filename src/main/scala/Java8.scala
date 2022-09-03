@@ -14,9 +14,9 @@ def mean(in:List[Int]):Int =
   // for循环不能有后面的:, 不是python
   for(item<-in)
     res += item
-  res
+  res/in.length
 
-@main def hello() =
+@main def hello =
     // 使用java的类一般还得new, var|val同义
     var l1 = new ArrayList[Any]()
     l1.add("hello")

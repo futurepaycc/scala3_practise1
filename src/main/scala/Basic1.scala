@@ -16,7 +16,7 @@ def rec_sum(l1:List[Int]):Int= l1 match {
 }
 
 // 直接定义可运行对象 => 不需要main方法
-@main def Basic1() = {
+@main def Basic1 = {
   println(sum1(2,3))
   println(sum2(3,4))
   println(sum3(3,4))
