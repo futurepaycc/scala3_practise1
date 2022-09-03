@@ -1,0 +1,16 @@
+{
+    // scala的手工配置调试方式
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "scala_file",
+            "type": "scala",
+            "request": "launch",
+            "mainClass": "${fileBasenameNoExtension}",
+            "args": [],
+            "jvmOptions": ["-cp","${workspaceFolder}/target/scala-3.1.3/classes"],
+            "env": {}
+        }
+
+    ]
+}

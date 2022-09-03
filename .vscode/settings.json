@@ -1,0 +1,11 @@
+{
+    "files.watcherExclude": {
+        "**/target": true
+    },
+    "files.exclude": {
+        ".scalafmt.conf": true,
+        "**/.bloop": true,
+        "**/.bsp": true,
+        "**/.metals": true
+    },
+}
