@@ -10,7 +10,7 @@ def sum2(a:Int,b:Int)={
 def sum3(a:Int,b:Int) = a + b
 
 // 递归sum和,match用法
-def rec_sum(l1:List[Int]):Int= l1 match {
+def rec_sum(l1:List[Int]):Int = l1 match {
     case Nil => 0;
     case h::t => h + rec_sum(t) //对尾部进行递归
 }
@@ -40,6 +40,15 @@ def rec_sum(l1:List[Int]):Int= l1 match {
 
   list1 = (1 to 9).toList //range to list
   println(list1)
+
+  for (item <- list1)
+    printf("%d-",item)
+  println
+
+  // 产生式与过滤函数
+  var list2 = for (item <- list1 if item%2 != 0) yield item //产生式
+  var list3 = list1.filter(_%2 != 0)
+  assert(list2.equals(list3))
 
   // list的递归求和
   var res = rec_sum(list1)
