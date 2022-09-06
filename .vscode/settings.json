@@ -8,4 +8,5 @@
         "**/.bsp": true,
         "**/.metals": true
     },
+    "editor.tabSize": 2,
 }
