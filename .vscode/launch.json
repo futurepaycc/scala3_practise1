@@ -3,6 +3,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "js_file",
+            "program": "${file}",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node",
+            "cwd": "${fileDirname}"
+        },
+        {
             "name": "scala_file",
             "type": "scala",
             "request": "launch",
