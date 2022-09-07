@@ -11,7 +11,7 @@ private def divide1(a:Double,b:Double):Option[Double] =
   else
     Some(a/b)
 
-// 2. Try测试
+// 2. Try测试, FIXME 测试有问题: 这里没有报异常 // scala3 除0开始返回: Infinity 
 private def divide2(a:Double,b:Double):Try[Double] = 
   Try(a/b)
 
@@ -27,8 +27,7 @@ private def divide3(a:Double,b:Double):Either[String,Double] =
 
   res = divide1(1.0, 0.0)
   println(res)
-
-  // scala3 除0开始返回: Infinity 
+  
   var res2 = divide2(2.0,0.0)
   res2 match
     case Success(value) => println(s"Success value = $value")
