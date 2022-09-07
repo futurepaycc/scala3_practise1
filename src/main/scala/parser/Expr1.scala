@@ -40,12 +40,12 @@ class Paser1 extends JavaTokenParsers {
   def factor: Parser[Any] = floatingPointNumber | "(" ~ expr ~ ")"
 }
 
-def test1() = {
+def Expr1_test1() = {
   val parser1 = new Paser1();
   val result = parser1.parseAll(parser1.expr, "2 * (3 + 7)")
   println(result)
 }
 
 @main def Expr1 = {
-  test1() //App已包含main函数，这里不需要
+  Expr1_test1() //App已包含main函数，这里不需要
 }

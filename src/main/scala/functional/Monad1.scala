@@ -1,3 +1,4 @@
+package functional
 // https://github.com/fpinscala/fpinscala/blob/second-edition/src/main/scala/fpinscala/answers/monads/Monad.scala
 // ------------------------------------------------------------------------------------- 测试1
 /* 
@@ -17,7 +18,7 @@ case class Id[+A](value: A):
   def flatMap[B](f: A => Id[B]): Id[B] =
     f(value)
 
-def test1 =
+private def test1 =
   var res = Id("hello, ").flatMap(a => Id("monad!").flatMap(b => Id(a + b)))
   println(res)
 
@@ -61,7 +62,7 @@ object OptionM extends Monad[Option] {
   def unit[A](a: => A): Option[A] = Option(a)
 }
 
-def test2 = 
+private def test2 = 
   val fn_range: Int => Seq[Int] = i => 1 to i
   val fn_option: Int => Option[Int] = i => Option(i + 1)
 
