@@ -20,6 +20,7 @@ Scala程序设计_2nd 20章
 Practical Scala DSLs 6、7章
 */
 import scala.util.parsing.combinator._
+// import scala.util.parsing.combinator.Parsers.ParseResult
 
 /*
 1. EBNF 表达式 => 对比js版本的仔细练习
@@ -38,12 +39,21 @@ class Paser1 extends JavaTokenParsers {
   def expr: Parser[Any] = term ~ rep("+" ~ term | "-" ~ term)
   def term: Parser[Any] = factor ~ rep("*" ~ factor | "/" ~ factor)
   def factor: Parser[Any] = floatingPointNumber | "(" ~ expr ~ ")"
+
+  // 也不能这么写
+  // def test1():ParseResult[Any]{
+  //   return parseAll(this.expr, "2 * (3 + 7)")
+  // }
+
 }
 
+// FIXME 无法显式引入ParseResult做为返回值!, 只能在这个调用函数中处理结果形式
 def Expr1_test1() = {
   val parser1 = new Paser1();
   val result = parser1.parseAll(parser1.expr, "2 * (3 + 7)")
+  println(result.successful)
   println(result)
+
 }
 
 @main def Expr1 = {
